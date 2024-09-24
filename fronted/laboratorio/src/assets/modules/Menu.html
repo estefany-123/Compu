@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar1.css">
+    <link rel="stylesheet" href="bootstrap/dist/js/bootstrap.bundle">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-icons/4.2.0/react-icons.min.js"></script>
+
+
+    <title>Menu</title>
+</head>
+<body>
+
+    <div className="container-fluid">
+        <div className="navbar fixed-top">
+            <div className="navbar fixed-top">
+                <img src="./public/logo.png" alt="logo" />
+                <p>Nombre Usuario</p>
+                <div>
+                    <button className="btn btn-outline-dark">Cerrar Sesion</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="contenedor_nav"></div>
+
+{/* sidebar */}
+        <div class={`sidebar bg-dark ${Open ? "open": ""}`} id="sidebar">
+{/* menu */}
+        <div className="side_head">
+            <div className="hamburgesa" id="menu-toggle" onclick={toggleMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+
+            <ul className="columna-flexible">
+                {/* menu usuario */}
+                <li className="items-nav">
+
+                    <a href="#home"
+                    data-bs-toggle="collapse"
+                    aria-expanded ="false"
+                    className="nav_link"
+                    >
+                    <IoHomeOutline className="icon casita" />
+                    <span>Home</span>
+                    </a>
+
+                    <ul className="collapse list-unstyled" id="home">
+                        <li>
+                            <a class="nav-link"
+                                href="#"
+                                onclick={()=>loadModule("src/modules/administrador/usuarios.html)")}>
+                                    < TbChecklist className="icon Citas"/> 
+                                    <span>Citas </span></a>
+                                
+                                        <ul className="collapse list-unstyled"      id="resultados">
+                                            <li>
+                                                <a class="nav-link"
+                                                    href="#"
+                                                    onclick={() =>loadModule("src/modules/administrador/usuarios.html")}>
+                                                        <BsClipboardData className="icon resultados" />
+                                                    <span>Resultados </span></a>
+                                                    
+                                            </li>
+                                        </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#usuario"
+                    data-bs-toggle="collapse"
+                    aria-expanded ="false"
+                    className="nav-link">
+                        <FaUser  className="icon usuario"/>
+                        <span>Usuario</span>
+                    </a>
+                    <ul className="collapse list-unstyled" id="usuario">
+                        <li>
+                            <a class="nav-link"
+                                href="#"
+                                onclick={() =>loadModule("src/modules/administrador/usuarios.html")}>
+                                <GrDocumentText className="icon personal_data"/>
+                                <span>Datos Personales</span>
+                            </a>
+                        </li>
+                    </ul >
+                    
+                </li>
+
+            </ul>
+        </div> 
+        
+    </div>
+    
+</body>
+</html>

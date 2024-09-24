@@ -42,7 +42,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: #ffb700; */
+    background-color: #60b8eb;
     padding-top: 10px;
     transition: width 0.3s;
 }
@@ -51,7 +51,7 @@
 .sidebar .side_head {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 10px; /*arriba de home*/
 }
 
 /* Estilo del contenido cuando el sidebar está colapsado */
@@ -63,6 +63,15 @@
 /* Estilo del sidebar colapsado */
 .sidebar.collapse {
     width: 60px; /* Mantiene el ancho para mostrar los iconos */
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar .icon{
+    width: 30px;
+    height: 20px;
 }
 
 /* Estilo del contenido cuando el sidebar está colapsado */
@@ -78,7 +87,9 @@
 }
 
 .sidebar .nav-link:hover {
-    background-color: #fc8f00;
+    background-color: #08fafa;
+    height: 30px;
+    width: 100%;
 }
 
 /* Sangría constante para los elementos hijos */
@@ -153,3 +164,33 @@
 .content.collapsed {
     margin-left: 60px;
 }
+
+
+
+
+
+
+
+/* Navbar.css */
+.sidebar {
+    width: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .sidebar.open {
+    width: 250px; /* Ancho que quieras para el menú */
+  }
+  
+  .hamburgesa {
+    cursor: pointer;
+  }
+  
+  .hamburgesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+  }
+
