@@ -7,10 +7,11 @@ const Inicio = () => {
             <div className="container">
                 <form className="formulario">
                     <h1>Iniciar sesion</h1>
-                    <p>Bienvenidos a su laboratorio de confianza diligencie los datos requeridos</p>
+                    <p className="descri">Bienvenidos a su laboratorio de confianza, por favor diligencie los datos requeridos</p>
 
                     <div className="tipo_id">
-                        <p htmlFor="">Tipo identificación</p>
+
+                    <label htmlFor="">Tipo Identificación</label>
                         <select id="opciones" className="opciones" required>
                         <option value="" disabled selected hidden >Seleccione una opcion</option>
                             <option value="opcion1">Cédula de Ciudadania</option>
@@ -21,8 +22,8 @@ const Inicio = () => {
 
                     </div>
                     <div className="input1">
-                        <label htmlFor="">Numero de identificación</label>
-                        <input type="password" required />
+                        <label htmlFor="">Número de identificación</label>
+                        <input type="password" required/>
 
                     </div>
                     <div className="input1">
@@ -34,11 +35,7 @@ const Inicio = () => {
 
                 </form>
             </div>
-            
-            <div className="imagen">
-                <img src="./public/medico.png" alt="" />
-            </div>
-
+        
         </div>
     )
 }
